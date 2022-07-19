@@ -1,4 +1,5 @@
 const Query = require("../models/query");
+const moment = require("moment");
 
 function createQueryPatient(req, res) {
   const query = new Query();
@@ -16,6 +17,7 @@ function createQueryPatient(req, res) {
     evolution,
   } = req.body;
   query.user_id = patientId;
+  query.date_query = moment();
   query.hear_rate = hear_rate;
   query.blood_pressure = blood_pressure;
   query.weight = weight;
@@ -45,7 +47,7 @@ function createQueryPatient(req, res) {
         if (!queryStored) {
           res.status(404).send({ message: "Error al guardar la evolución." });
         } else {
-          res.status(200).send({ user: queryStored });
+          res.status(200).send({ message: "Consulta guardada." });
         }
       }
     });

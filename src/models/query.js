@@ -3,6 +3,7 @@ const Schema = mongoose.Schema;
 
 const QuerySchema = {
   user_id: String,
+  date_query: Date,
   hear_rate: Number,
   blood_pressure: String,
   weight: Number,
