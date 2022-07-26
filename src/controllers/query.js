@@ -27,6 +27,7 @@ function createQueryPatient(req, res) {
   query.plan_manage = plan_manage;
   query.diagnosis = diagnosis;
   query.evolution = evolution;
+  query.imc = getImc(weight, size);
 
   if (
     !evolution ||
@@ -68,6 +69,10 @@ function getQueryPatient(req, res) {
   });
 }
 
+const getImc = (weight, size) => {
+  let imc = (weight / Math.pow(size / 100, 2)).toFixed(1);
+  return imc;
+};
 module.exports = {
   createQueryPatient,
   getQueryPatient,
