@@ -1,0 +1,102 @@
+###
+POST http://localhost:3977/cmd/v1/sign-up HTTP/1.1
+Content-Type: application/json
+
+{
+    "email": "prueba@gmail.com",
+    "password": "1234",
+    "repeatPassword": "1234"
+}
+
+
+
+##############################################################################################################################
+GET http://localhost:9000/cmd/users HTTP/1.1
+
+###
+GET http://localhost:9000/cmd/users/123454 HTTP/1.1
+
+###
+GET http://localhost:9000/cmd/users/23333/personal-history  HTTP/1.1
+
+###
+GET http://localhost:9000/cmd/users/123/physical-exam  HTTP/1.1
+
+###
+POST http://localhost:9000/cmd/users HTTP/1.1
+Content-Type: application/json
+
+{
+    "identification": "1253",
+    "document_type": "CC",
+    "clinic_history": 2,
+    "name": "Aleja",
+    "last_name": "Pinzon",
+    "email": "daniel@mail.com",
+    "city": "ibague",
+    "start_date": "2022-04-02",
+    "birth_date": "1996-04-02",
+    "civil_status": "soltero",
+    "number_phone": "315555555",
+    "gender": "masculino",
+    "address": "address ",
+    "ocupation": "developer software",
+    "companion": "tul to",
+    "entity": "tul",
+    "sport": "ultiamte",
+    "objetive": "bajar peso",
+    "mc": "mc test",
+    "eea": "eea test"
+}
+
+###
+PATCH  http://localhost:9000/cmd/users/12345 HTTP/1.1
+Content-Type: application/json
+
+{
+    "city": "bogotá",
+    "address": "direccion ",
+    "ocupation": "developer software",
+    "companion": "dasdsdddd",
+    "entity": "qqqqqqqqqqqqqqqqqqqqq",
+    "sport": "ultimate",
+    "objetive": "bmasa mucsulararsdsdas",
+    "mc": "mc test",
+    "eea": "eea test"
+}
+
+###
+DELETE http://localhost:9000/cmd/users/123452 HTTP/1.1
+
+###
+POST http://localhost:9000/cmd/personal-history HTTP/1.1
+Content-Type: application/json
+
+{
+    "cycles": "Ciclos",
+    "cytology": "Cit",
+    "duration": "32",
+    "ec": "233",
+    "ep": "21323",
+    "family_history": "dsdddddd",
+    "fgo": "FGO",
+    "fractures": "Fracura",
+    "frequency": "12",
+    "fum": "FUM",
+    "intensity": "32",
+    "menarche": "Men",
+    "obstetricians": "GUN",
+    "pathological": "Pata",
+    "place": "Ibagué",
+    "practice_time": "12",
+    "r_x_s": "sssssssssssssssssssssssssss",
+    "rehabilitation": "Reha",
+    "sport": "Rugby",
+    "sprains": "Esg",
+    "surgical": "Quir",
+    "tears": "Des",
+    "trauma": "Trauma",
+    "tx_ai": "TX",
+    "user_id": "123"
+}
+###########################################################################################################################
