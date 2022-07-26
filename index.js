@@ -16,7 +16,7 @@ mongoose.connect(
     } else {
       console.log("Connect.");
 
-      app.listen(port, () => {
+      app.listen(process.env.PORT, "0.0.0.0", () => {
         console.log(
           `Conectado a http://${IP_SERVER}:${port}/cmd/${API_VERSION}`
         );
